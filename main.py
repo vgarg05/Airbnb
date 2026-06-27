@@ -29,7 +29,6 @@ from fastapi import FastAPI, HTTPException, Query, Header, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
-from sentence_transformers import SentenceTransformer
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -45,8 +44,9 @@ log = logging.getLogger(__name__)
 # Constants
 # ---------------------------------------------------------------------------
 LISTINGS_PATH = Path(__file__).parent / "listings.json"
+CHROMA_DB_PATH = Path(__file__).parent / "chroma_db"
 CHROMA_COLLECTION = "airbnb_listings"
-EMBED_MODEL = "all-MiniLM-L6-v2"
+EMBED_MODEL = "gemini-embedding-2"
 GEMINI_MODEL = "gemini-2.5-flash-lite"
 # Fallback chain — tried in order on 503 (overloaded) or 429 (rate-limited).
 # Each model has its own free-tier quota bucket, so trying the next one
@@ -62,7 +62,6 @@ TOP_K = 3  # number of listings to retrieve per query
 # ---------------------------------------------------------------------------
 # Global singletons (populated during startup)
 # ---------------------------------------------------------------------------
-_embed_model: SentenceTransformer | None = None
 _chroma_collection: chromadb.Collection | None = None
 _listings_by_id: dict[str, dict[str, Any]] = {}
 
@@ -72,8 +71,8 @@ _listings_by_id: dict[str, dict[str, Any]] = {}
 # ---------------------------------------------------------------------------
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Load model, embed listings, populate ChromaDB."""
-    global _embed_model, _chroma_collection, _listings_by_id
+    """Load pre-computed ChromaDB database and listings."""
+    global _chroma_collection, _listings_by_id
 
     # 1. Load listings -------------------------------------------------------
     log.info("Loading listings from %s …", LISTINGS_PATH)
@@ -82,58 +81,20 @@ async def lifespan(app: FastAPI):
     _listings_by_id = {listing["id"]: listing for listing in listings}
     log.info("Loaded %d listings.", len(listings))
 
-    # 2. Load embedding model ------------------------------------------------
-    log.info("Loading sentence-transformer model '%s' …", EMBED_MODEL)
-    _embed_model = SentenceTransformer(EMBED_MODEL)
-    log.info("Embedding model loaded.")
-
-    # 3. Set up ChromaDB (ephemeral / in-memory) ------------------------------
-    log.info("Initialising ChromaDB …")
-    chroma_client = chromadb.Client(Settings(anonymized_telemetry=False))
+    # 2. Set up ChromaDB (persistent client pointing to existing chroma_db) ---
+    log.info("Loading persistent ChromaDB from %s …", CHROMA_DB_PATH)
+    chroma_client = chromadb.PersistentClient(
+        path=str(CHROMA_DB_PATH),
+        settings=Settings(anonymized_telemetry=False)
+    )
     _chroma_collection = chroma_client.get_or_create_collection(
         name=CHROMA_COLLECTION,
         metadata={"hnsw:space": "cosine"},
     )
-
-    # 4. Embed & store --------------------------------------------------------
-    log.info("Embedding listings with rich metadata …")
-    texts = [
-        f"Name: {listing['name']}\n"
-        f"Location: {listing['location']}\n"
-        f"Type: {listing['type']}\n"
-        f"Amenities: {', '.join(listing['amenities'])}\n"
-        f"Vibe: {listing['vibe_description']}"
-        for listing in listings
-    ]
-    ids = [listing["id"] for listing in listings]
-
-    # Metadata stored alongside each vector (for display in the response)
-    metadatas = [
-        {
-            "name": listing["name"],
-            "location": listing["location"],
-            "type": listing["type"],
-            "price_per_night": listing["price_per_night"],
-            "rating": listing["rating"],
-            "amenities": ", ".join(listing["amenities"]),
-            "vibe_description": listing["vibe_description"],
-        }
-        for listing in listings
-    ]
-
-    embeddings = _embed_model.encode(texts, show_progress_bar=True).tolist()
-
-    _chroma_collection.add(
-        ids=ids,
-        embeddings=embeddings,
-        documents=texts,
-        metadatas=metadatas,
-    )
-    log.info("ChromaDB populated with %d vectors.", len(ids))
+    log.info("ChromaDB collection loaded successfully.")
 
     yield  # ← application runs here
 
-    # Shutdown (nothing to clean up for in-memory Chroma)
     log.info("Shutting down.")
 
 
@@ -240,16 +201,37 @@ async def chat(body: ChatRequest, x_user_api_key: str | None = Header(None)):
     if not body.message.strip():
         raise HTTPException(status_code=400, detail="Message cannot be empty.")
 
-    if _embed_model is None or _chroma_collection is None:
+    if _chroma_collection is None:
         raise HTTPException(
-            status_code=503, detail="Server not ready — embeddings not loaded yet."
+            status_code=503, detail="Server not ready — database not loaded yet."
         )
 
-    # ── 1. Embed the user query ──────────────────────────────────────────────
-    log.info("Embedding query: %r", body.message)
-    query_embedding = _embed_model.encode([body.message]).tolist()[0]
+    # ── 1. Extract API Key and Initialise Gemini Client ─────────────────────
+    api_key = x_user_api_key.strip() if (x_user_api_key and x_user_api_key.strip()) else os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        raise HTTPException(
+            status_code=400,
+            detail="No API key found. Please provide a valid Gemini API key in settings.",
+        )
 
-    # ── 2. Semantic search in ChromaDB ───────────────────────────────────────
+    gemini_client = genai.Client(api_key=api_key)
+
+    # ── 2. Embed the user query using Gemini API ─────────────────────────────
+    log.info("Embedding query with Gemini API: %r", body.message)
+    try:
+        emb_res = gemini_client.models.embed_content(
+            model=EMBED_MODEL,
+            contents=body.message,
+        )
+        query_embedding = emb_res.embeddings[0].values
+    except Exception as exc:
+        log.error("Failed to generate query embedding: %s", exc)
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to generate query embedding. Please check your Gemini API key or try again."
+        )
+
+    # ── 3. Semantic search in ChromaDB ───────────────────────────────────────
     log.info("Querying ChromaDB for top %d results …", TOP_K)
     results = _chroma_collection.query(
         query_embeddings=[query_embedding],
@@ -266,7 +248,7 @@ async def chat(body: ChatRequest, x_user_api_key: str | None = Header(None)):
         [f"{d:.4f}" for d in results["distances"][0]],
     )
 
-    # ── 3. Build full listing objects for the response ───────────────────────
+    # ── 4. Build full listing objects for the response ───────────────────────
     listings_for_response: list[ListingSummary] = []
     for listing_id, meta in zip(retrieved_ids, retrieved_metadatas):
         amenities_raw = meta.get("amenities", "")
@@ -287,16 +269,6 @@ async def chat(body: ChatRequest, x_user_api_key: str | None = Header(None)):
                 vibe_description=meta["vibe_description"],
             )
         )
-
-    # ── 4. Call Gemini (with model fallback + error handling) ─────────────────────
-    api_key = x_user_api_key.strip() if (x_user_api_key and x_user_api_key.strip()) else os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        raise HTTPException(
-            status_code=400,
-            detail="No API key found. Please provide a valid Gemini API key in settings.",
-        )
-
-    gemini_client = genai.Client(api_key=api_key)
     system_prompt  = _build_system_prompt(retrieved_metadatas)
 
     reply_text: str | None = None
@@ -456,9 +428,9 @@ async def chat_stream(
     SSE streaming endpoint.  The client sends the message as a query parameter
     and receives a stream of newline-delimited JSON events.
     """
-    if _embed_model is None or _chroma_collection is None:
+    if _chroma_collection is None:
         raise HTTPException(
-            status_code=503, detail="Server not ready — embeddings not loaded yet."
+            status_code=503, detail="Server not ready — database not loaded yet."
         )
 
     api_key = x_user_api_key.strip() if (x_user_api_key and x_user_api_key.strip()) else os.environ.get("GEMINI_API_KEY")
@@ -468,8 +440,22 @@ async def chat_stream(
             detail="No API key found. Please provide a valid Gemini API key in settings.",
         )
 
-    # Embed + retrieve (same as /chat)
-    query_embedding = _embed_model.encode([message]).tolist()[0]
+    # Embed + retrieve (using Gemini embedding API)
+    log.info("Embedding query with Gemini API: %r", message)
+    try:
+        gemini_client = genai.Client(api_key=api_key)
+        emb_res = gemini_client.models.embed_content(
+            model=EMBED_MODEL,
+            contents=message,
+        )
+        query_embedding = emb_res.embeddings[0].values
+    except Exception as exc:
+        log.error("Failed to generate query embedding: %s", exc)
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to generate query embedding. Please check your Gemini API key or try again."
+        )
+
     results = _chroma_collection.query(
         query_embeddings=[query_embedding],
         n_results=TOP_K,

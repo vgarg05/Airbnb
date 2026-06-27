@@ -12,8 +12,6 @@ __pycache__/
 node_modules/
 dist/
 
-# Chroma persisted data (if you ever switch to disk mode)
-chroma_db/
 
 # OS
 .DS_Store
