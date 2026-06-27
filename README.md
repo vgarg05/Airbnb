@@ -158,7 +158,7 @@ airbnb/
 │
 └── 📄 Docs
     ├── README.md
-    └── .env.example
+    └── .env (just to show create it to use locally)
 ```
 
 ---
@@ -181,7 +181,7 @@ cd airbnb-ai-concierge
 ### 2 — Configure environment
 
 ```bash
-cp .env.example .env
+# Create .env file, and
 # Open .env and set your GEMINI_API_KEY
 ```
 
