@@ -158,7 +158,7 @@ airbnb/
 │
 └── 📄 Docs
     ├── README.md
-    └── .env (just to show create it to use locally)
+    └── .env (just to show, create it to use locally)
 ```
 
 ---
