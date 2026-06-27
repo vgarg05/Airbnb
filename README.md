@@ -254,7 +254,7 @@ Open **http://localhost:3000** → start chatting. 🎉
   ]
 }
 ```
-
+<!-- 
 ### `GET /listings`
 
 Returns all 50 listings — useful for building a catalogue view or debugging retrieval.
@@ -419,4 +419,4 @@ Built with ❤️ as a demonstration of applied AI engineering.
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/your-profile)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF385C?style=flat-square&logo=airbnb&logoColor=white)](https://your-portfolio.dev)
 
-</div>
+</div> -->
