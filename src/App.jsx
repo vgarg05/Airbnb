@@ -263,6 +263,7 @@ export default function App() {
   // Settings modal states
   const [showSettings, setShowSettings] = useState(false)
   const [apiKeyInput, setApiKeyInput]   = useState('')
+  const [userApiKey, setUserApiKey]     = useState('')
   const [showKey, setShowKey]           = useState(false)
   const [quotaExhausted, setQuotaExhausted] = useState(false)
 
@@ -275,8 +276,13 @@ export default function App() {
 
   // Load custom API key on mount
   useEffect(() => {
-    const savedKey = localStorage.getItem('user_gemini_key') || ''
-    setApiKeyInput(savedKey)
+    try {
+      const savedKey = localStorage.getItem('user_gemini_key') || ''
+      setApiKeyInput(savedKey)
+      setUserApiKey(savedKey)
+    } catch (e) {
+      console.warn('localStorage is restricted or inaccessible:', e)
+    }
   }, [])
 
   // Auto-scroll to latest message
@@ -295,10 +301,15 @@ export default function App() {
   const handleSaveKey = (e) => {
     e.preventDefault()
     const trimmed = apiKeyInput.trim()
-    if (trimmed) {
-      localStorage.setItem('user_gemini_key', trimmed)
-    } else {
-      localStorage.removeItem('user_gemini_key')
+    setUserApiKey(trimmed)
+    try {
+      if (trimmed) {
+        localStorage.setItem('user_gemini_key', trimmed)
+      } else {
+        localStorage.removeItem('user_gemini_key')
+      }
+    } catch (e) {
+      console.warn('Could not save to localStorage:', e)
     }
     setQuotaExhausted(false)
     setShowSettings(false)
@@ -328,18 +339,27 @@ export default function App() {
       const controller = new AbortController()
       abortRef.current = controller
 
-      const url = `${STREAM_URL}?message=${encodeURIComponent(trimmed)}`
-      const headers = { 'Content-Type': 'application/json' }
-      
-      // Attach user key if it exists in local storage
-      const userKey = localStorage.getItem('user_gemini_key')
-      if (userKey && userKey.trim()) {
-        headers['X-User-API-Key'] = userKey.trim()
+      // Attach user key if it exists in state or local storage
+      let userKey = userApiKey.trim()
+      if (!userKey) {
+        try {
+          userKey = (localStorage.getItem('user_gemini_key') || '').trim()
+        } catch (e) { /* ignore */ }
       }
 
-      const response = await fetch(url, { 
+      const headers = { 'Content-Type': 'application/json' }
+      if (userKey) {
+        headers['X-User-API-Key'] = userKey
+      }
+
+      const response = await fetch(STREAM_URL, { 
+        method: 'POST',
         signal: controller.signal,
-        headers: headers
+        headers: headers,
+        body: JSON.stringify({
+          message: trimmed,
+          key: userKey || null
+        })
       })
 
       if (!response.ok) {
@@ -603,12 +623,8 @@ export default function App() {
               <Send className="w-4 h-4 text-white" />
             </button>
           </div>
+          
 
-          <p className="text-center text-xs text-neutral-400 mt-2 leading-relaxed">
-            Powered by&nbsp;<span className="font-medium text-neutral-500">Gemini AI</span>
-            &nbsp;·&nbsp;Press <kbd className="px-1 py-0.5 rounded bg-neutral-100 font-mono text-[10px]">Enter</kbd> to send
-            &nbsp;·&nbsp;<kbd className="px-1 py-0.5 rounded bg-neutral-100 font-mono text-[10px]">Shift+Enter</kbd> for new line
-          </p>
           <p className="text-center text-[10px] text-neutral-400 mt-2.5 leading-relaxed max-w-md mx-auto border-t border-neutral-100/60 pt-2">
             Disclaimer: This is an independent portfolio project created for demonstration purposes. It is not affiliated with or endorsed by Airbnb.
           </p>
@@ -637,7 +653,11 @@ export default function App() {
 
             {quotaExhausted && (
               <div className="mb-4 p-3 bg-amber-50 border border-amber-100 rounded-2xl text-xs text-amber-800 leading-relaxed">
-                ⚠️ Our shared Gemini API quota has been exhausted. You can supply your own API key to continue chatting immediately.
+                {userApiKey ? (
+                  <>⚠️ Your personal Gemini API key is currently rate-limited (free-tier keys are limited to 15 requests per minute). Please wait 1 minute before trying again.</>
+                ) : (
+                  <>⚠️ Our shared Gemini API quota has been exhausted. You can supply your own API key to continue chatting immediately.</>
+                )}
               </div>
             )}
 
@@ -691,7 +711,10 @@ export default function App() {
                   type="button"
                   onClick={() => {
                     setApiKeyInput("")
-                    localStorage.removeItem('user_gemini_key')
+                    setUserApiKey("")
+                    try {
+                      localStorage.removeItem('user_gemini_key')
+                    } catch (e) { /* ignore */ }
                     setQuotaExhausted(false)
                     setShowSettings(false)
                   }}

@@ -123,6 +123,7 @@ app.add_middleware(
 # ---------------------------------------------------------------------------
 class ChatRequest(BaseModel):
     message: str
+    key: str | None = None
 
 
 class ListingSummary(BaseModel):
@@ -207,7 +208,8 @@ async def chat(body: ChatRequest, x_user_api_key: str | None = Header(None)):
         )
 
     # ── 1. Extract API Key and Initialise Gemini Client ─────────────────────
-    api_key = x_user_api_key.strip() if (x_user_api_key and x_user_api_key.strip()) else os.environ.get("GEMINI_API_KEY")
+    raw_key = body.key or x_user_api_key
+    api_key = raw_key.strip() if (raw_key and raw_key.strip()) else os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise HTTPException(
             status_code=400,
@@ -419,21 +421,22 @@ async def _stream_gemini(
     yield f"data: {json.dumps({'type': 'done'})}\n\n"
 
 
-@app.get("/chat/stream", tags=["Chat"])
+@app.post("/chat/stream", tags=["Chat"])
 async def chat_stream(
-    message: str = Query(..., min_length=1),
+    body: ChatRequest,
     x_user_api_key: str | None = Header(None),
 ):
     """
-    SSE streaming endpoint.  The client sends the message as a query parameter
-    and receives a stream of newline-delimited JSON events.
+    SSE streaming endpoint. The client sends a ChatRequest body containing the message
+    and optional user API key, and receives a stream of newline-delimited JSON events.
     """
     if _chroma_collection is None:
         raise HTTPException(
             status_code=503, detail="Server not ready — database not loaded yet."
         )
 
-    api_key = x_user_api_key.strip() if (x_user_api_key and x_user_api_key.strip()) else os.environ.get("GEMINI_API_KEY")
+    raw_key = body.key or x_user_api_key
+    api_key = raw_key.strip() if (raw_key and raw_key.strip()) else os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise HTTPException(
             status_code=400,
@@ -441,12 +444,12 @@ async def chat_stream(
         )
 
     # Embed + retrieve (using Gemini embedding API)
-    log.info("Embedding query with Gemini API: %r", message)
+    log.info("Embedding query with Gemini API: %r", body.message)
     try:
         gemini_client = genai.Client(api_key=api_key)
         emb_res = gemini_client.models.embed_content(
             model=EMBED_MODEL,
-            contents=message,
+            contents=body.message,
         )
         query_embedding = emb_res.embeddings[0].values
     except Exception as exc:
@@ -484,7 +487,7 @@ async def chat_stream(
         )
 
     return StreamingResponse(
-        _stream_gemini(message, retrieved_metadatas, listings_for_response, api_key),
+        _stream_gemini(body.message, retrieved_metadatas, listings_for_response, api_key),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",
