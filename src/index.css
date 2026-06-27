@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ─────────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-neutral-50 text-neutral-900 font-sans antialiased;
+    min-height: 100dvh;
+  }
+
+  ::-webkit-scrollbar          { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track    { background: transparent; }
+  ::-webkit-scrollbar-thumb    { @apply rounded-full bg-neutral-300; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-neutral-400; }
+}
+
+/* ── Components ───────────────────────────────────────────────────────── */
+@layer components {
+
+  /* Airbnb logo gradient text */
+  .logo-text {
+    background: linear-gradient(135deg, #FF385C 0%, #E61E4D 60%, #C13584 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass card */
+  .glass-card {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.6);
+  }
+
+  /* Chat bubble — user */
+  .bubble-user {
+    @apply rounded-2xl rounded-br-sm px-4 py-3 text-sm leading-relaxed shadow-sm;
+    background: linear-gradient(135deg, #FF385C 0%, #E61E4D 100%);
+    color: #fff;
+    max-width: min(75%, 520px);
+  }
+
+  /* Chat bubble — AI */
+  .bubble-ai {
+    @apply rounded-2xl rounded-bl-sm px-4 py-3 text-sm leading-relaxed shadow-sm;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    color: #222;
+    max-width: min(88%, 680px);
+  }
+
+  /* Chip / quick suggestion */
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium
+           border border-neutral-200 bg-white text-neutral-700
+           cursor-pointer select-none whitespace-nowrap
+           transition-all duration-200
+           hover:border-airbnb-500 hover:text-airbnb-500 hover:shadow-md hover:-translate-y-0.5
+           active:scale-95;
+  }
+
+  /* Listing card */
+  .listing-card {
+    @apply relative flex flex-col overflow-hidden rounded-2xl bg-white
+           border border-neutral-100 shadow-sm
+           transition-all duration-300
+           hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Send button */
+  .send-btn {
+    @apply flex items-center justify-center w-10 h-10 rounded-xl
+           transition-all duration-200 active:scale-90;
+    background: linear-gradient(135deg, #FF385C 0%, #E61E4D 100%);
+    box-shadow: 0 4px 12px rgba(255, 56, 92, 0.35);
+  }
+
+  .send-btn:hover:not(:disabled) {
+    box-shadow: 0 6px 18px rgba(255, 56, 92, 0.45);
+    transform: translateY(-1px);
+  }
+
+  .send-btn:disabled {
+    @apply opacity-40 cursor-not-allowed shadow-none;
+  }
+
+  /* Input field */
+  .chat-input {
+    @apply w-full bg-transparent text-sm text-neutral-800 placeholder-neutral-400
+           outline-none resize-none leading-relaxed;
+    max-height: 120px;
+  }
+
+  /* Typing dot */
+  .typing-dot {
+    @apply w-2 h-2 rounded-full bg-neutral-400;
+    animation: bounceDot 1.2s infinite ease-in-out both;
+  }
+
+  .typing-dot:nth-child(1) { animation-delay: 0s;    }
+  .typing-dot:nth-child(2) { animation-delay: 0.18s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.36s; }
+
+  /* Amenity pill */
+  .amenity-pill {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-lg
+           bg-neutral-50 border border-neutral-100
+           text-xs font-medium text-neutral-600;
+  }
+
+  /* Property type badge */
+  .type-badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md
+           text-xs font-semibold uppercase tracking-wide;
+  }
+}
+
+/* ── Utilities ────────────────────────────────────────────────────────── */
+@layer utilities {
+  /* Chat scroll container */
+  .chat-scroll {
+    scroll-padding-bottom: 1rem;
+  }
+
+  /* Shimmer skeleton */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      #f0f0f0 25%,
+      #e0e0e0 50%,
+      #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.8s infinite linear;
+  }
+
+  /* Hero gradient */
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      rgba(255,56,92,0.08) 0%,
+      rgba(255,255,255,0)   60%,
+      rgba(193,53,132,0.05) 100%
+    );
+  }
+}
+
+/* ── Property type colour maps ────────────────────────────────────────── */
+.type-apartment { @apply bg-blue-50   text-blue-700;  }
+.type-cabin     { @apply bg-amber-50  text-amber-700; }
+.type-villa     { @apply bg-emerald-50 text-emerald-700; }
+.type-studio    { @apply bg-purple-50 text-purple-700; }
+
+/* Property card image strip — gradient per type */
+.img-apartment  { background: linear-gradient(135deg,#3b82f6,#6366f1); }
+.img-cabin      { background: linear-gradient(135deg,#f59e0b,#84cc16); }
+.img-villa      { background: linear-gradient(135deg,#10b981,#06b6d4); }
+.img-studio     { background: linear-gradient(135deg,#8b5cf6,#ec4899); }
+
+/* ── Keyframes ────────────────────────────────────────────────────────── */
+@keyframes bounceDot {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.4; }
+  40%           { transform: scale(1); opacity: 1;   }
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* Blinking cursor for streaming AI messages */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 0.9s step-start infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease both;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.25s ease both;
+}

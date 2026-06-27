@@ -1,0 +1,1871 @@
+[
+  {
+    "id": "abn-001",
+    "name": "Paris Cabin",
+    "location": "Paris, France",
+    "type": "cabin",
+    "price_per_night": 203,
+    "rating": 4.6,
+    "amenities": [
+      "Pool",
+      "Fireplace",
+      "Balcony",
+      "WiFi",
+      "Smart TV",
+      "Ocean View",
+      "Air Conditioning",
+      "Workspace"
+    ],
+    "vibe_description": "This family-friendly and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-002",
+    "name": "Goa Nest",
+    "location": "Goa, India",
+    "type": "cabin",
+    "price_per_night": 732,
+    "rating": 4.58,
+    "amenities": [
+      "Balcony",
+      "WiFi",
+      "Hot Tub",
+      "Garden",
+      "Breakfast",
+      "Parking",
+      "Kitchen"
+    ],
+    "vibe_description": "This romantic and exotic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-003",
+    "name": "Tokyo Loft",
+    "location": "Tokyo, Japan",
+    "type": "studio",
+    "price_per_night": 168,
+    "rating": 4.73,
+    "amenities": [
+      "Pool",
+      "Breakfast",
+      "Bike Rental",
+      "Fireplace",
+      "Smart TV",
+      "Hot Tub"
+    ],
+    "vibe_description": "This cozy and modern stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-004",
+    "name": "Swiss Alps Villa",
+    "location": "Swiss Alps, Switzerland",
+    "type": "apartment",
+    "price_per_night": 114,
+    "rating": 4.7,
+    "amenities": [
+      "Pool",
+      "Hot Tub",
+      "Bike Rental",
+      "Balcony",
+      "Workspace",
+      "Parking"
+    ],
+    "vibe_description": "This rustic and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-005",
+    "name": "Bali Cabin",
+    "location": "Bali, Indonesia",
+    "type": "villa",
+    "price_per_night": 87,
+    "rating": 4.96,
+    "amenities": [
+      "Workspace",
+      "Mountain View",
+      "Ocean View",
+      "Balcony",
+      "Fireplace",
+      "Bike Rental"
+    ],
+    "vibe_description": "This modern and peaceful stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-006",
+    "name": "New York Loft",
+    "location": "New York, USA",
+    "type": "villa",
+    "price_per_night": 1198,
+    "rating": 4.65,
+    "amenities": [
+      "WiFi",
+      "Air Conditioning",
+      "Hot Tub",
+      "Smart TV",
+      "Pool"
+    ],
+    "vibe_description": "This cozy and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-007",
+    "name": "London Escape",
+    "location": "London, UK",
+    "type": "apartment",
+    "price_per_night": 1014,
+    "rating": 4.75,
+    "amenities": [
+      "Garden",
+      "Parking",
+      "Pool",
+      "Mountain View",
+      "Kitchen",
+      "Ocean View"
+    ],
+    "vibe_description": "This adventurous and budget-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-008",
+    "name": "Barcelona Hideaway",
+    "location": "Barcelona, Spain",
+    "type": "villa",
+    "price_per_night": 317,
+    "rating": 4.84,
+    "amenities": [
+      "Hot Tub",
+      "Parking",
+      "Workspace",
+      "Pool",
+      "Fireplace"
+    ],
+    "vibe_description": "This peaceful and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-009",
+    "name": "Maldives Haven",
+    "location": "Maldives",
+    "type": "apartment",
+    "price_per_night": 98,
+    "rating": 4.86,
+    "amenities": [
+      "Breakfast",
+      "Ocean View",
+      "Hot Tub",
+      "Mountain View",
+      "Garden",
+      "Kitchen"
+    ],
+    "vibe_description": "This luxurious and modern stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-010",
+    "name": "Cape Town Haven",
+    "location": "Cape Town, South Africa",
+    "type": "studio",
+    "price_per_night": 277,
+    "rating": 4.75,
+    "amenities": [
+      "Pool",
+      "Bike Rental",
+      "Workspace",
+      "Balcony",
+      "Ocean View",
+      "WiFi",
+      "Smart TV"
+    ],
+    "vibe_description": "This vibrant and adventurous stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-011",
+    "name": "Kyoto Escape",
+    "location": "Kyoto, Japan",
+    "type": "villa",
+    "price_per_night": 420,
+    "rating": 4.58,
+    "amenities": [
+      "Smart TV",
+      "Breakfast",
+      "WiFi",
+      "Pool",
+      "Coffee Maker",
+      "Fireplace",
+      "Parking",
+      "Bike Rental"
+    ],
+    "vibe_description": "This vibrant and rustic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-012",
+    "name": "Tulum Loft",
+    "location": "Tulum, Mexico",
+    "type": "apartment",
+    "price_per_night": 180,
+    "rating": 4.57,
+    "amenities": [
+      "Pool",
+      "Ocean View",
+      "Kitchen",
+      "Coffee Maker",
+      "WiFi",
+      "Smart TV"
+    ],
+    "vibe_description": "This luxurious and modern stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-013",
+    "name": "Santorini Residence",
+    "location": "Santorini, Greece",
+    "type": "villa",
+    "price_per_night": 148,
+    "rating": 4.83,
+    "amenities": [
+      "Smart TV",
+      "Hot Tub",
+      "Garden",
+      "Fireplace",
+      "Mountain View",
+      "Coffee Maker",
+      "Workspace"
+    ],
+    "vibe_description": "This family-friendly and romantic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-014",
+    "name": "Amalfi Coast Studio",
+    "location": "Amalfi Coast, Italy",
+    "type": "villa",
+    "price_per_night": 98,
+    "rating": 4.86,
+    "amenities": [
+      "Smart TV",
+      "Coffee Maker",
+      "Workspace",
+      "Garden",
+      "Mountain View",
+      "Ocean View",
+      "Fireplace"
+    ],
+    "vibe_description": "This exotic and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-015",
+    "name": "Tuscany Loft",
+    "location": "Tuscany, Italy",
+    "type": "villa",
+    "price_per_night": 75,
+    "rating": 4.93,
+    "amenities": [
+      "Air Conditioning",
+      "Mountain View",
+      "Smart TV",
+      "Bike Rental",
+      "Kitchen",
+      "Ocean View",
+      "Parking",
+      "Hot Tub"
+    ],
+    "vibe_description": "This romantic and modern stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-016",
+    "name": "Norwegian Fjords Villa",
+    "location": "Norwegian Fjords, Norway",
+    "type": "cabin",
+    "price_per_night": 132,
+    "rating": 4.7,
+    "amenities": [
+      "Fireplace",
+      "Coffee Maker",
+      "Ocean View",
+      "Kitchen",
+      "Workspace",
+      "Breakfast",
+      "Balcony"
+    ],
+    "vibe_description": "This modern and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-017",
+    "name": "Scottish Highlands Studio",
+    "location": "Scottish Highlands, Scotland",
+    "type": "cabin",
+    "price_per_night": 397,
+    "rating": 4.96,
+    "amenities": [
+      "Breakfast",
+      "Fireplace",
+      "Hot Tub",
+      "Ocean View",
+      "WiFi"
+    ],
+    "vibe_description": "This cozy and rustic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-018",
+    "name": "Queenstown Studio",
+    "location": "Queenstown, New Zealand",
+    "type": "studio",
+    "price_per_night": 170,
+    "rating": 4.67,
+    "amenities": [
+      "Smart TV",
+      "Hot Tub",
+      "Breakfast",
+      "Pool",
+      "Balcony",
+      "Parking",
+      "Mountain View"
+    ],
+    "vibe_description": "This peaceful and romantic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-019",
+    "name": "Patagonia Hideaway",
+    "location": "Patagonia, Chile",
+    "type": "studio",
+    "price_per_night": 60,
+    "rating": 4.5,
+    "amenities": [
+      "Garden",
+      "Balcony",
+      "Pool",
+      "Workspace",
+      "Kitchen",
+      "Hot Tub"
+    ],
+    "vibe_description": "This vibrant and modern stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-020",
+    "name": "Marrakech Studio",
+    "location": "Marrakech, Morocco",
+    "type": "cabin",
+    "price_per_night": 356,
+    "rating": 4.85,
+    "amenities": [
+      "Hot Tub",
+      "Workspace",
+      "Balcony",
+      "Kitchen",
+      "Smart TV",
+      "Ocean View",
+      "Breakfast"
+    ],
+    "vibe_description": "This adventurous and luxurious stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-021",
+    "name": "Zanzibar Studio",
+    "location": "Zanzibar, Tanzania",
+    "type": "cabin",
+    "price_per_night": 229,
+    "rating": 4.83,
+    "amenities": [
+      "Kitchen",
+      "Hot Tub",
+      "Parking",
+      "Ocean View",
+      "Balcony",
+      "Breakfast",
+      "WiFi",
+      "Coffee Maker"
+    ],
+    "vibe_description": "This peaceful and luxurious stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-022",
+    "name": "Dubai Hideaway",
+    "location": "Dubai, UAE",
+    "type": "apartment",
+    "price_per_night": 49,
+    "rating": 4.89,
+    "amenities": [
+      "Parking",
+      "Air Conditioning",
+      "Bike Rental",
+      "Workspace",
+      "Mountain View",
+      "Breakfast",
+      "Smart TV"
+    ],
+    "vibe_description": "This exotic and adventurous stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-023",
+    "name": "Canadian Rockies Retreat",
+    "location": "Canadian Rockies, Canada",
+    "type": "cabin",
+    "price_per_night": 901,
+    "rating": 4.64,
+    "amenities": [
+      "Fireplace",
+      "Smart TV",
+      "Coffee Maker",
+      "Mountain View",
+      "Workspace",
+      "Ocean View",
+      "Parking"
+    ],
+    "vibe_description": "This luxurious and adventurous stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-024",
+    "name": "Costa Rica Residence",
+    "location": "Costa Rica",
+    "type": "studio",
+    "price_per_night": 154,
+    "rating": 4.52,
+    "amenities": [
+      "Fireplace",
+      "Air Conditioning",
+      "Balcony",
+      "Workspace",
+      "Hot Tub",
+      "Mountain View",
+      "Smart TV",
+      "Parking"
+    ],
+    "vibe_description": "This family-friendly and luxurious stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-025",
+    "name": "Rajasthan Cabin",
+    "location": "Rajasthan, India",
+    "type": "studio",
+    "price_per_night": 953,
+    "rating": 4.82,
+    "amenities": [
+      "Mountain View",
+      "Coffee Maker",
+      "Balcony",
+      "Bike Rental",
+      "Fireplace"
+    ],
+    "vibe_description": "This exotic and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-026",
+    "name": "Rio de Janeiro Nest",
+    "location": "Rio de Janeiro, Brazil",
+    "type": "cabin",
+    "price_per_night": 241,
+    "rating": 4.52,
+    "amenities": [
+      "Mountain View",
+      "Air Conditioning",
+      "Fireplace",
+      "Coffee Maker",
+      "Parking",
+      "Workspace"
+    ],
+    "vibe_description": "This bohemian and exotic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-027",
+    "name": "Lisbon Haven",
+    "location": "Lisbon, Portugal",
+    "type": "studio",
+    "price_per_night": 385,
+    "rating": 4.66,
+    "amenities": [
+      "Smart TV",
+      "Bike Rental",
+      "Breakfast",
+      "Air Conditioning",
+      "Fireplace",
+      "Coffee Maker",
+      "Workspace",
+      "Ocean View"
+    ],
+    "vibe_description": "This luxurious and modern stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-028",
+    "name": "Amsterdam Escape",
+    "location": "Amsterdam, Netherlands",
+    "type": "cabin",
+    "price_per_night": 557,
+    "rating": 4.88,
+    "amenities": [
+      "Air Conditioning",
+      "Ocean View",
+      "Bike Rental",
+      "Pool",
+      "Garden",
+      "Parking",
+      "Mountain View",
+      "Workspace"
+    ],
+    "vibe_description": "This vibrant and exotic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-029",
+    "name": "Iceland Studio",
+    "location": "Iceland",
+    "type": "studio",
+    "price_per_night": 647,
+    "rating": 4.54,
+    "amenities": [
+      "Air Conditioning",
+      "Balcony",
+      "Garden",
+      "Fireplace",
+      "Smart TV",
+      "Mountain View"
+    ],
+    "vibe_description": "This cozy and family-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-030",
+    "name": "Singapore Villa",
+    "location": "Singapore",
+    "type": "cabin",
+    "price_per_night": 174,
+    "rating": 4.66,
+    "amenities": [
+      "Smart TV",
+      "WiFi",
+      "Mountain View",
+      "Balcony",
+      "Coffee Maker",
+      "Hot Tub",
+      "Parking",
+      "Garden"
+    ],
+    "vibe_description": "This budget-friendly and romantic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-031",
+    "name": "Vietnam Studio",
+    "location": "Vietnam",
+    "type": "apartment",
+    "price_per_night": 176,
+    "rating": 4.65,
+    "amenities": [
+      "Smart TV",
+      "Breakfast",
+      "Garden",
+      "Bike Rental",
+      "Parking",
+      "Hot Tub",
+      "Mountain View",
+      "Air Conditioning"
+    ],
+    "vibe_description": "This luxurious and peaceful stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-032",
+    "name": "Sri Lanka Retreat",
+    "location": "Sri Lanka",
+    "type": "cabin",
+    "price_per_night": 944,
+    "rating": 4.74,
+    "amenities": [
+      "Workspace",
+      "Bike Rental",
+      "Parking",
+      "Coffee Maker",
+      "Balcony",
+      "Fireplace",
+      "Air Conditioning",
+      "Smart TV"
+    ],
+    "vibe_description": "This rustic and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-033",
+    "name": "Serengeti Haven",
+    "location": "Serengeti, Tanzania",
+    "type": "villa",
+    "price_per_night": 604,
+    "rating": 4.94,
+    "amenities": [
+      "Fireplace",
+      "Workspace",
+      "Balcony",
+      "Bike Rental",
+      "Air Conditioning"
+    ],
+    "vibe_description": "This adventurous and romantic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-034",
+    "name": "Aspen Hideaway",
+    "location": "Aspen, Colorado, USA",
+    "type": "villa",
+    "price_per_night": 96,
+    "rating": 4.69,
+    "amenities": [
+      "Parking",
+      "Kitchen",
+      "Bike Rental",
+      "Coffee Maker",
+      "Balcony",
+      "Ocean View"
+    ],
+    "vibe_description": "This family-friendly and peaceful stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-035",
+    "name": "Big Sur Loft",
+    "location": "Big Sur, California, USA",
+    "type": "villa",
+    "price_per_night": 312,
+    "rating": 4.73,
+    "amenities": [
+      "Garden",
+      "Mountain View",
+      "Workspace",
+      "Pool",
+      "Smart TV"
+    ],
+    "vibe_description": "This romantic and exotic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-036",
+    "name": "Joshua Tree Loft",
+    "location": "Joshua Tree, California, USA",
+    "type": "cabin",
+    "price_per_night": 230,
+    "rating": 4.6,
+    "amenities": [
+      "Ocean View",
+      "Mountain View",
+      "Fireplace",
+      "Air Conditioning",
+      "Workspace"
+    ],
+    "vibe_description": "This cozy and rustic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-037",
+    "name": "Havana Nest",
+    "location": "Havana, Cuba",
+    "type": "studio",
+    "price_per_night": 120,
+    "rating": 4.73,
+    "amenities": [
+      "Garden",
+      "Fireplace",
+      "Hot Tub",
+      "Smart TV",
+      "Bike Rental",
+      "Pool",
+      "Parking"
+    ],
+    "vibe_description": "This peaceful and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-038",
+    "name": "Buenos Aires Nest",
+    "location": "Buenos Aires, Argentina",
+    "type": "villa",
+    "price_per_night": 195,
+    "rating": 4.51,
+    "amenities": [
+      "Coffee Maker",
+      "Balcony",
+      "Garden",
+      "Mountain View",
+      "Pool",
+      "Hot Tub",
+      "Bike Rental"
+    ],
+    "vibe_description": "This cozy and peaceful stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-039",
+    "name": "Cartagena Villa",
+    "location": "Cartagena, Colombia",
+    "type": "studio",
+    "price_per_night": 1181,
+    "rating": 4.89,
+    "amenities": [
+      "Garden",
+      "Breakfast",
+      "Balcony",
+      "Workspace",
+      "Kitchen"
+    ],
+    "vibe_description": "This cozy and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-040",
+    "name": "Chiang Mai Haven",
+    "location": "Chiang Mai, Thailand",
+    "type": "apartment",
+    "price_per_night": 154,
+    "rating": 4.51,
+    "amenities": [
+      "Bike Rental",
+      "Pool",
+      "Balcony",
+      "Kitchen",
+      "Workspace",
+      "Air Conditioning",
+      "Fireplace",
+      "Smart TV"
+    ],
+    "vibe_description": "This adventurous and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-041",
+    "name": "Dubrovnik Cabin",
+    "location": "Dubrovnik, Croatia",
+    "type": "cabin",
+    "price_per_night": 53,
+    "rating": 4.8,
+    "amenities": [
+      "Parking",
+      "Balcony",
+      "Smart TV",
+      "Garden",
+      "Hot Tub",
+      "Ocean View",
+      "Kitchen",
+      "Mountain View"
+    ],
+    "vibe_description": "This cozy and peaceful stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-042",
+    "name": "Prague Villa",
+    "location": "Prague, Czech Republic",
+    "type": "apartment",
+    "price_per_night": 81,
+    "rating": 4.62,
+    "amenities": [
+      "Coffee Maker",
+      "Kitchen",
+      "WiFi",
+      "Air Conditioning",
+      "Parking",
+      "Fireplace",
+      "Bike Rental",
+      "Mountain View"
+    ],
+    "vibe_description": "This vibrant and peaceful stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-043",
+    "name": "Vienna Cabin",
+    "location": "Vienna, Austria",
+    "type": "cabin",
+    "price_per_night": 151,
+    "rating": 4.64,
+    "amenities": [
+      "WiFi",
+      "Breakfast",
+      "Mountain View",
+      "Pool",
+      "Smart TV",
+      "Balcony",
+      "Air Conditioning"
+    ],
+    "vibe_description": "This bohemian and luxurious stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-044",
+    "name": "Copenhagen Nest",
+    "location": "Copenhagen, Denmark",
+    "type": "cabin",
+    "price_per_night": 176,
+    "rating": 4.82,
+    "amenities": [
+      "Parking",
+      "Coffee Maker",
+      "WiFi",
+      "Pool",
+      "Ocean View",
+      "Mountain View",
+      "Balcony",
+      "Workspace"
+    ],
+    "vibe_description": "This peaceful and modern stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-045",
+    "name": "Edinburgh Loft",
+    "location": "Edinburgh, Scotland",
+    "type": "apartment",
+    "price_per_night": 365,
+    "rating": 4.68,
+    "amenities": [
+      "Smart TV",
+      "Garden",
+      "Breakfast",
+      "Kitchen",
+      "Coffee Maker",
+      "Air Conditioning",
+      "Ocean View"
+    ],
+    "vibe_description": "This peaceful and exotic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-046",
+    "name": "Mykonos Cabin",
+    "location": "Mykonos, Greece",
+    "type": "villa",
+    "price_per_night": 165,
+    "rating": 4.56,
+    "amenities": [
+      "Workspace",
+      "Pool",
+      "Garden",
+      "Breakfast",
+      "Smart TV",
+      "Fireplace"
+    ],
+    "vibe_description": "This luxurious and exotic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-047",
+    "name": "Ibiza Escape",
+    "location": "Ibiza, Spain",
+    "type": "villa",
+    "price_per_night": 330,
+    "rating": 4.64,
+    "amenities": [
+      "Mountain View",
+      "Smart TV",
+      "Bike Rental",
+      "Ocean View",
+      "Parking",
+      "Kitchen",
+      "Fireplace"
+    ],
+    "vibe_description": "This peaceful and romantic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-048",
+    "name": "Lake Como Hideaway",
+    "location": "Lake Como, Italy",
+    "type": "villa",
+    "price_per_night": 119,
+    "rating": 4.56,
+    "amenities": [
+      "Pool",
+      "Breakfast",
+      "Ocean View",
+      "Garden",
+      "Fireplace"
+    ],
+    "vibe_description": "This modern and budget-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-049",
+    "name": "Positano Hideaway",
+    "location": "Positano, Italy",
+    "type": "apartment",
+    "price_per_night": 159,
+    "rating": 4.93,
+    "amenities": [
+      "Bike Rental",
+      "Air Conditioning",
+      "Parking",
+      "Kitchen",
+      "Fireplace",
+      "WiFi",
+      "Ocean View"
+    ],
+    "vibe_description": "This budget-friendly and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-050",
+    "name": "Sydney Loft",
+    "location": "Sydney, Australia",
+    "type": "cabin",
+    "price_per_night": 396,
+    "rating": 4.7,
+    "amenities": [
+      "Pool",
+      "Fireplace",
+      "Parking",
+      "Coffee Maker",
+      "Hot Tub"
+    ],
+    "vibe_description": "This peaceful and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-051",
+    "name": "Fiji Nest",
+    "location": "Fiji",
+    "type": "studio",
+    "price_per_night": 106,
+    "rating": 4.56,
+    "amenities": [
+      "Air Conditioning",
+      "Coffee Maker",
+      "Breakfast",
+      "Balcony",
+      "Bike Rental",
+      "Garden",
+      "Ocean View",
+      "Parking"
+    ],
+    "vibe_description": "This peaceful and rustic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-052",
+    "name": "Sedona Loft",
+    "location": "Sedona, Arizona, USA",
+    "type": "cabin",
+    "price_per_night": 69,
+    "rating": 4.53,
+    "amenities": [
+      "Balcony",
+      "Workspace",
+      "Mountain View",
+      "Ocean View",
+      "Parking"
+    ],
+    "vibe_description": "This cozy and adventurous stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-053",
+    "name": "Tulum Loft",
+    "location": "Tulum, Mexico",
+    "type": "apartment",
+    "price_per_night": 330,
+    "rating": 4.77,
+    "amenities": [
+      "WiFi",
+      "Balcony",
+      "Air Conditioning",
+      "Garden",
+      "Hot Tub",
+      "Smart TV"
+    ],
+    "vibe_description": "This peaceful and romantic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-054",
+    "name": "Patagonia Loft",
+    "location": "Patagonia, Chile",
+    "type": "villa",
+    "price_per_night": 108,
+    "rating": 4.85,
+    "amenities": [
+      "Fireplace",
+      "Workspace",
+      "Mountain View",
+      "Ocean View",
+      "Parking",
+      "Hot Tub",
+      "Smart TV",
+      "Balcony"
+    ],
+    "vibe_description": "This cozy and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-055",
+    "name": "Prague Hideaway",
+    "location": "Prague, Czech Republic",
+    "type": "apartment",
+    "price_per_night": 55,
+    "rating": 4.57,
+    "amenities": [
+      "Ocean View",
+      "Pool",
+      "WiFi",
+      "Fireplace",
+      "Bike Rental",
+      "Hot Tub",
+      "Workspace"
+    ],
+    "vibe_description": "This peaceful and budget-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-056",
+    "name": "Singapore Nest",
+    "location": "Singapore",
+    "type": "cabin",
+    "price_per_night": 228,
+    "rating": 4.84,
+    "amenities": [
+      "Breakfast",
+      "Bike Rental",
+      "Parking",
+      "Air Conditioning",
+      "Coffee Maker",
+      "Pool",
+      "Hot Tub",
+      "WiFi"
+    ],
+    "vibe_description": "This family-friendly and vibrant stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-057",
+    "name": "Scottish Highlands Escape",
+    "location": "Scottish Highlands, Scotland",
+    "type": "villa",
+    "price_per_night": 111,
+    "rating": 4.51,
+    "amenities": [
+      "WiFi",
+      "Coffee Maker",
+      "Workspace",
+      "Ocean View",
+      "Hot Tub",
+      "Bike Rental"
+    ],
+    "vibe_description": "This adventurous and budget-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-058",
+    "name": "Prague Villa",
+    "location": "Prague, Czech Republic",
+    "type": "villa",
+    "price_per_night": 646,
+    "rating": 4.72,
+    "amenities": [
+      "Kitchen",
+      "Hot Tub",
+      "Balcony",
+      "Workspace",
+      "Air Conditioning",
+      "Pool",
+      "Garden"
+    ],
+    "vibe_description": "This vibrant and family-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-059",
+    "name": "Zanzibar Retreat",
+    "location": "Zanzibar, Tanzania",
+    "type": "apartment",
+    "price_per_night": 401,
+    "rating": 4.83,
+    "amenities": [
+      "Workspace",
+      "Balcony",
+      "Garden",
+      "Air Conditioning",
+      "Ocean View",
+      "Bike Rental"
+    ],
+    "vibe_description": "This family-friendly and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-060",
+    "name": "Singapore Retreat",
+    "location": "Singapore",
+    "type": "villa",
+    "price_per_night": 338,
+    "rating": 4.54,
+    "amenities": [
+      "Workspace",
+      "Pool",
+      "Coffee Maker",
+      "Balcony",
+      "Breakfast",
+      "WiFi",
+      "Garden"
+    ],
+    "vibe_description": "This budget-friendly and family-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-061",
+    "name": "Santorini Hideaway",
+    "location": "Santorini, Greece",
+    "type": "apartment",
+    "price_per_night": 783,
+    "rating": 4.75,
+    "amenities": [
+      "Parking",
+      "Coffee Maker",
+      "WiFi",
+      "Mountain View",
+      "Ocean View",
+      "Breakfast",
+      "Fireplace",
+      "Garden"
+    ],
+    "vibe_description": "This budget-friendly and exotic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-062",
+    "name": "Goa Hideaway",
+    "location": "Goa, India",
+    "type": "apartment",
+    "price_per_night": 361,
+    "rating": 4.98,
+    "amenities": [
+      "Kitchen",
+      "Ocean View",
+      "Breakfast",
+      "WiFi",
+      "Smart TV",
+      "Balcony"
+    ],
+    "vibe_description": "This cozy and luxurious stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-063",
+    "name": "Singapore Cabin",
+    "location": "Singapore",
+    "type": "apartment",
+    "price_per_night": 85,
+    "rating": 4.96,
+    "amenities": [
+      "Bike Rental",
+      "Parking",
+      "Garden",
+      "Ocean View",
+      "Breakfast",
+      "Coffee Maker"
+    ],
+    "vibe_description": "This family-friendly and budget-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-064",
+    "name": "Norwegian Fjords Studio",
+    "location": "Norwegian Fjords, Norway",
+    "type": "villa",
+    "price_per_night": 772,
+    "rating": 4.72,
+    "amenities": [
+      "Coffee Maker",
+      "Mountain View",
+      "Hot Tub",
+      "Breakfast",
+      "Garden",
+      "Fireplace"
+    ],
+    "vibe_description": "This cozy and peaceful stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-065",
+    "name": "Dubai Escape",
+    "location": "Dubai, UAE",
+    "type": "studio",
+    "price_per_night": 81,
+    "rating": 4.96,
+    "amenities": [
+      "WiFi",
+      "Ocean View",
+      "Garden",
+      "Parking",
+      "Hot Tub",
+      "Smart TV",
+      "Air Conditioning"
+    ],
+    "vibe_description": "This adventurous and budget-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-066",
+    "name": "Vietnam Retreat",
+    "location": "Vietnam",
+    "type": "apartment",
+    "price_per_night": 65,
+    "rating": 4.67,
+    "amenities": [
+      "Parking",
+      "Bike Rental",
+      "Kitchen",
+      "Mountain View",
+      "Garden",
+      "Coffee Maker",
+      "Hot Tub",
+      "Balcony"
+    ],
+    "vibe_description": "This luxurious and family-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-067",
+    "name": "Zanzibar Villa",
+    "location": "Zanzibar, Tanzania",
+    "type": "studio",
+    "price_per_night": 53,
+    "rating": 4.86,
+    "amenities": [
+      "Coffee Maker",
+      "Workspace",
+      "Bike Rental",
+      "Parking",
+      "Fireplace",
+      "Air Conditioning",
+      "WiFi",
+      "Garden"
+    ],
+    "vibe_description": "This bohemian and rustic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-068",
+    "name": "London Haven",
+    "location": "London, UK",
+    "type": "cabin",
+    "price_per_night": 246,
+    "rating": 4.93,
+    "amenities": [
+      "Mountain View",
+      "Breakfast",
+      "Air Conditioning",
+      "WiFi",
+      "Garden",
+      "Fireplace",
+      "Balcony",
+      "Workspace"
+    ],
+    "vibe_description": "This cozy and budget-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-069",
+    "name": "Dubai Nest",
+    "location": "Dubai, UAE",
+    "type": "studio",
+    "price_per_night": 117,
+    "rating": 4.81,
+    "amenities": [
+      "Fireplace",
+      "Smart TV",
+      "Kitchen",
+      "Workspace",
+      "Breakfast",
+      "Balcony",
+      "Parking",
+      "Air Conditioning"
+    ],
+    "vibe_description": "This bohemian and romantic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-070",
+    "name": "Bali Haven",
+    "location": "Bali, Indonesia",
+    "type": "apartment",
+    "price_per_night": 76,
+    "rating": 4.62,
+    "amenities": [
+      "Air Conditioning",
+      "Garden",
+      "Pool",
+      "Balcony",
+      "Smart TV",
+      "Workspace",
+      "Parking"
+    ],
+    "vibe_description": "This budget-friendly and adventurous stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-071",
+    "name": "Goa Studio",
+    "location": "Goa, India",
+    "type": "apartment",
+    "price_per_night": 149,
+    "rating": 4.52,
+    "amenities": [
+      "Hot Tub",
+      "Kitchen",
+      "Parking",
+      "Balcony",
+      "Fireplace"
+    ],
+    "vibe_description": "This luxurious and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-072",
+    "name": "Havana Cabin",
+    "location": "Havana, Cuba",
+    "type": "studio",
+    "price_per_night": 715,
+    "rating": 4.83,
+    "amenities": [
+      "Kitchen",
+      "Fireplace",
+      "Pool",
+      "Hot Tub",
+      "Balcony",
+      "Coffee Maker"
+    ],
+    "vibe_description": "This modern and luxurious stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-073",
+    "name": "Buenos Aires Cabin",
+    "location": "Buenos Aires, Argentina",
+    "type": "villa",
+    "price_per_night": 128,
+    "rating": 4.57,
+    "amenities": [
+      "Breakfast",
+      "Air Conditioning",
+      "Ocean View",
+      "Workspace",
+      "WiFi",
+      "Parking",
+      "Smart TV",
+      "Bike Rental"
+    ],
+    "vibe_description": "This adventurous and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-074",
+    "name": "Canadian Rockies Loft",
+    "location": "Canadian Rockies, Canada",
+    "type": "studio",
+    "price_per_night": 163,
+    "rating": 4.98,
+    "amenities": [
+      "Smart TV",
+      "Garden",
+      "Ocean View",
+      "Air Conditioning",
+      "Bike Rental",
+      "Mountain View",
+      "Balcony"
+    ],
+    "vibe_description": "This budget-friendly and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-075",
+    "name": "Rajasthan Retreat",
+    "location": "Rajasthan, India",
+    "type": "villa",
+    "price_per_night": 56,
+    "rating": 4.78,
+    "amenities": [
+      "Hot Tub",
+      "WiFi",
+      "Smart TV",
+      "Workspace",
+      "Balcony",
+      "Ocean View",
+      "Parking"
+    ],
+    "vibe_description": "This rustic and modern stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-076",
+    "name": "Cartagena Residence",
+    "location": "Cartagena, Colombia",
+    "type": "studio",
+    "price_per_night": 269,
+    "rating": 4.87,
+    "amenities": [
+      "Air Conditioning",
+      "Hot Tub",
+      "Coffee Maker",
+      "Kitchen",
+      "Mountain View",
+      "Workspace",
+      "Garden"
+    ],
+    "vibe_description": "This rustic and peaceful stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-077",
+    "name": "Dubrovnik Hideaway",
+    "location": "Dubrovnik, Croatia",
+    "type": "cabin",
+    "price_per_night": 201,
+    "rating": 4.55,
+    "amenities": [
+      "Hot Tub",
+      "Coffee Maker",
+      "Air Conditioning",
+      "WiFi",
+      "Bike Rental"
+    ],
+    "vibe_description": "This vibrant and adventurous stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-078",
+    "name": "Patagonia Haven",
+    "location": "Patagonia, Chile",
+    "type": "villa",
+    "price_per_night": 393,
+    "rating": 4.66,
+    "amenities": [
+      "Kitchen",
+      "Mountain View",
+      "Fireplace",
+      "Coffee Maker",
+      "Breakfast",
+      "Bike Rental",
+      "Garden",
+      "Hot Tub"
+    ],
+    "vibe_description": "This peaceful and adventurous stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-079",
+    "name": "Vietnam Studio",
+    "location": "Vietnam",
+    "type": "studio",
+    "price_per_night": 167,
+    "rating": 4.97,
+    "amenities": [
+      "Workspace",
+      "Coffee Maker",
+      "Pool",
+      "Air Conditioning",
+      "Smart TV",
+      "Fireplace",
+      "Mountain View"
+    ],
+    "vibe_description": "This modern and exotic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-080",
+    "name": "Sedona Haven",
+    "location": "Sedona, Arizona, USA",
+    "type": "studio",
+    "price_per_night": 375,
+    "rating": 4.77,
+    "amenities": [
+      "Coffee Maker",
+      "WiFi",
+      "Ocean View",
+      "Breakfast",
+      "Pool"
+    ],
+    "vibe_description": "This budget-friendly and vibrant stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-081",
+    "name": "Buenos Aires Loft",
+    "location": "Buenos Aires, Argentina",
+    "type": "villa",
+    "price_per_night": 187,
+    "rating": 4.69,
+    "amenities": [
+      "Mountain View",
+      "Workspace",
+      "Bike Rental",
+      "Air Conditioning",
+      "WiFi",
+      "Hot Tub",
+      "Breakfast"
+    ],
+    "vibe_description": "This vibrant and rustic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-082",
+    "name": "Prague Hideaway",
+    "location": "Prague, Czech Republic",
+    "type": "cabin",
+    "price_per_night": 174,
+    "rating": 4.53,
+    "amenities": [
+      "Hot Tub",
+      "Workspace",
+      "Balcony",
+      "Pool",
+      "Fireplace",
+      "WiFi",
+      "Parking",
+      "Ocean View"
+    ],
+    "vibe_description": "This budget-friendly and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-083",
+    "name": "Norwegian Fjords Residence",
+    "location": "Norwegian Fjords, Norway",
+    "type": "cabin",
+    "price_per_night": 268,
+    "rating": 4.93,
+    "amenities": [
+      "Coffee Maker",
+      "Air Conditioning",
+      "Kitchen",
+      "Workspace",
+      "Garden",
+      "Breakfast"
+    ],
+    "vibe_description": "This family-friendly and rustic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-084",
+    "name": "Lisbon Hideaway",
+    "location": "Lisbon, Portugal",
+    "type": "studio",
+    "price_per_night": 146,
+    "rating": 4.82,
+    "amenities": [
+      "Smart TV",
+      "Ocean View",
+      "WiFi",
+      "Garden",
+      "Kitchen",
+      "Mountain View",
+      "Air Conditioning",
+      "Hot Tub"
+    ],
+    "vibe_description": "This luxurious and vibrant stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-085",
+    "name": "Copenhagen Nest",
+    "location": "Copenhagen, Denmark",
+    "type": "studio",
+    "price_per_night": 375,
+    "rating": 4.68,
+    "amenities": [
+      "Pool",
+      "Balcony",
+      "Ocean View",
+      "Mountain View",
+      "Bike Rental",
+      "Air Conditioning",
+      "Garden"
+    ],
+    "vibe_description": "This modern and luxurious stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-086",
+    "name": "Goa Loft",
+    "location": "Goa, India",
+    "type": "apartment",
+    "price_per_night": 364,
+    "rating": 4.52,
+    "amenities": [
+      "Air Conditioning",
+      "Fireplace",
+      "Coffee Maker",
+      "Hot Tub",
+      "Mountain View",
+      "Pool",
+      "Breakfast"
+    ],
+    "vibe_description": "This luxurious and rustic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-087",
+    "name": "Tuscany Hideaway",
+    "location": "Tuscany, Italy",
+    "type": "villa",
+    "price_per_night": 385,
+    "rating": 4.66,
+    "amenities": [
+      "WiFi",
+      "Ocean View",
+      "Smart TV",
+      "Fireplace",
+      "Coffee Maker",
+      "Breakfast"
+    ],
+    "vibe_description": "This peaceful and adventurous stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-088",
+    "name": "Vienna Residence",
+    "location": "Vienna, Austria",
+    "type": "studio",
+    "price_per_night": 196,
+    "rating": 4.92,
+    "amenities": [
+      "WiFi",
+      "Kitchen",
+      "Coffee Maker",
+      "Smart TV",
+      "Mountain View",
+      "Hot Tub"
+    ],
+    "vibe_description": "This vibrant and romantic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-089",
+    "name": "Scottish Highlands Loft",
+    "location": "Scottish Highlands, Scotland",
+    "type": "apartment",
+    "price_per_night": 133,
+    "rating": 4.53,
+    "amenities": [
+      "Mountain View",
+      "Garden",
+      "Pool",
+      "Air Conditioning",
+      "Coffee Maker",
+      "Kitchen",
+      "Breakfast",
+      "Smart TV"
+    ],
+    "vibe_description": "This budget-friendly and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-090",
+    "name": "Chiang Mai Cabin",
+    "location": "Chiang Mai, Thailand",
+    "type": "villa",
+    "price_per_night": 329,
+    "rating": 4.52,
+    "amenities": [
+      "Parking",
+      "Workspace",
+      "WiFi",
+      "Smart TV",
+      "Air Conditioning",
+      "Balcony",
+      "Bike Rental"
+    ],
+    "vibe_description": "This modern and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-091",
+    "name": "Mykonos Nest",
+    "location": "Mykonos, Greece",
+    "type": "studio",
+    "price_per_night": 288,
+    "rating": 4.95,
+    "amenities": [
+      "Fireplace",
+      "Kitchen",
+      "Hot Tub",
+      "Bike Rental",
+      "Pool"
+    ],
+    "vibe_description": "This adventurous and peaceful stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-092",
+    "name": "Dubrovnik Hideaway",
+    "location": "Dubrovnik, Croatia",
+    "type": "apartment",
+    "price_per_night": 566,
+    "rating": 4.79,
+    "amenities": [
+      "Coffee Maker",
+      "Hot Tub",
+      "Breakfast",
+      "Ocean View",
+      "Air Conditioning",
+      "Smart TV",
+      "Parking"
+    ],
+    "vibe_description": "This family-friendly and cozy stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-093",
+    "name": "Prague Hideaway",
+    "location": "Prague, Czech Republic",
+    "type": "apartment",
+    "price_per_night": 460,
+    "rating": 4.82,
+    "amenities": [
+      "Smart TV",
+      "Air Conditioning",
+      "Mountain View",
+      "Balcony",
+      "Kitchen",
+      "Parking"
+    ],
+    "vibe_description": "This family-friendly and exotic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-094",
+    "name": "Zanzibar Hideaway",
+    "location": "Zanzibar, Tanzania",
+    "type": "cabin",
+    "price_per_night": 48,
+    "rating": 4.71,
+    "amenities": [
+      "Garden",
+      "Fireplace",
+      "Workspace",
+      "Air Conditioning",
+      "Pool",
+      "Bike Rental",
+      "Smart TV"
+    ],
+    "vibe_description": "This cozy and family-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-095",
+    "name": "Lake Como Villa",
+    "location": "Lake Como, Italy",
+    "type": "cabin",
+    "price_per_night": 385,
+    "rating": 4.86,
+    "amenities": [
+      "Pool",
+      "Hot Tub",
+      "Breakfast",
+      "Smart TV",
+      "Kitchen",
+      "Workspace"
+    ],
+    "vibe_description": "This cozy and family-friendly stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-096",
+    "name": "Vienna Cabin",
+    "location": "Vienna, Austria",
+    "type": "cabin",
+    "price_per_night": 71,
+    "rating": 4.96,
+    "amenities": [
+      "Pool",
+      "Ocean View",
+      "Hot Tub",
+      "Parking",
+      "Kitchen",
+      "Bike Rental",
+      "Smart TV",
+      "Breakfast"
+    ],
+    "vibe_description": "This luxurious and adventurous stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-097",
+    "name": "Tuscany Nest",
+    "location": "Tuscany, Italy",
+    "type": "studio",
+    "price_per_night": 276,
+    "rating": 4.92,
+    "amenities": [
+      "Garden",
+      "Pool",
+      "Coffee Maker",
+      "Ocean View",
+      "Hot Tub",
+      "Mountain View",
+      "Balcony"
+    ],
+    "vibe_description": "This bohemian and rustic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-098",
+    "name": "Copenhagen Villa",
+    "location": "Copenhagen, Denmark",
+    "type": "apartment",
+    "price_per_night": 515,
+    "rating": 4.81,
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Fireplace",
+      "Ocean View",
+      "Garden"
+    ],
+    "vibe_description": "This peaceful and vibrant stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-099",
+    "name": "Paris Loft",
+    "location": "Paris, France",
+    "type": "apartment",
+    "price_per_night": 981,
+    "rating": 4.59,
+    "amenities": [
+      "Coffee Maker",
+      "Pool",
+      "Fireplace",
+      "Garden",
+      "Workspace",
+      "WiFi"
+    ],
+    "vibe_description": "This cozy and bohemian stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-100",
+    "name": "Rajasthan Residence",
+    "location": "Rajasthan, India",
+    "type": "studio",
+    "price_per_night": 96,
+    "rating": 4.71,
+    "amenities": [
+      "Kitchen",
+      "Bike Rental",
+      "Ocean View",
+      "Garden",
+      "Parking",
+      "Hot Tub",
+      "Workspace"
+    ],
+    "vibe_description": "This cozy and romantic stay creates a mood where guests feel relaxed, inspired, and emotionally connected. Soft golden light, the scent of fresh wood or sea air, and gentle sounds of wind, waves, or distant city music make the space feel immersive and memorable."
+  },
+  {
+    "id": "abn-101",
+    "name": "Goa Beachfront Family Villa",
+    "location": "Goa, India",
+    "type": "villa",
+    "price_per_night": 180,
+    "rating": 4.92,
+    "amenities": [
+      "Pool",
+      "WiFi",
+      "Kids Play Area",
+      "Kitchen",
+      "Air Conditioning",
+      "Ocean View"
+    ],
+    "vibe_description": "Spacious and family-friendly beach villa in Goa, perfect for a memorable family trip. Features a private swimming pool, beachfront lawn, fully equipped kitchen, and kids play area."
+  },
+  {
+    "id": "abn-102",
+    "name": "Cozy Swiss Alps Mountain Cabin",
+    "location": "Swiss Alps, Switzerland",
+    "type": "cabin",
+    "price_per_night": 150,
+    "rating": 4.95,
+    "amenities": [
+      "Fireplace",
+      "Hot Tub",
+      "WiFi",
+      "Mountain View",
+      "Kitchen",
+      "Balcony"
+    ],
+    "vibe_description": "Cozy rustic cabin nestled deep in the snowy mountains. Warm up by the stone fireplace, relax in the outdoor hot tub, and enjoy panoramic views of the Swiss peaks."
+  },
+  {
+    "id": "abn-103",
+    "name": "Romantic Parisian Balcony Stay",
+    "location": "Paris, France",
+    "type": "apartment",
+    "price_per_night": 140,
+    "rating": 4.88,
+    "amenities": [
+      "Balcony",
+      "WiFi",
+      "Eiffel Tower View",
+      "Coffee Maker",
+      "Kitchen"
+    ],
+    "vibe_description": "A romantic Parisian apartment with a classic French balcony offering gorgeous city views, perfect for couples looking for an intimate getaway in the City of Light."
+  },
+  {
+    "id": "abn-104",
+    "name": "Budget Tokyo Micro Studio",
+    "location": "Tokyo, Japan",
+    "type": "studio",
+    "price_per_night": 45,
+    "rating": 4.72,
+    "amenities": [
+      "WiFi",
+      "Air Conditioning",
+      "Workspace",
+      "Kitchenette"
+    ],
+    "vibe_description": "An affordable, modern, and compact budget studio in the heart of Tokyo. Ideal for solo travelers, digital nomads, and budget-conscious explorers."
+  },
+  {
+    "id": "abn-105",
+    "name": "Luxury Maldives Overwater Villa",
+    "location": "Maldives",
+    "type": "villa",
+    "price_per_night": 450,
+    "rating": 4.98,
+    "amenities": [
+      "Ocean View",
+      "Pool",
+      "WiFi",
+      "Sun Deck",
+      "Snorkeling Gear"
+    ],
+    "vibe_description": "A stunning luxury overwater villa in the Maldives suspended over crystal clear turquoise waters. Features a private plunge pool, sun deck, and direct lagoon access."
+  },
+  {
+    "id": "abn-106",
+    "name": "Serengeti Wilderness Safari Lodge",
+    "location": "Serengeti, Tanzania",
+    "type": "cabin",
+    "price_per_night": 220,
+    "rating": 4.91,
+    "amenities": [
+      "Mountain View",
+      "Fireplace",
+      "Outdoor Deck",
+      "WiFi",
+      "Garden"
+    ],
+    "vibe_description": "An authentic safari lodge in the African wilderness. Enjoy stunning views of the savannah, animal sightings from the outdoor deck, and cozy bonfire nights."
+  }
+]
