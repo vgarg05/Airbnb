@@ -609,6 +609,9 @@ export default function App() {
             &nbsp;·&nbsp;Press <kbd className="px-1 py-0.5 rounded bg-neutral-100 font-mono text-[10px]">Enter</kbd> to send
             &nbsp;·&nbsp;<kbd className="px-1 py-0.5 rounded bg-neutral-100 font-mono text-[10px]">Shift+Enter</kbd> for new line
           </p>
+          <p className="text-center text-[10px] text-neutral-400 mt-2.5 leading-relaxed max-w-md mx-auto border-t border-neutral-100/60 pt-2">
+            Disclaimer: This is an independent portfolio project created for demonstration purposes. It is not affiliated with or endorsed by Airbnb.
+          </p>
         </div>
       </div>
 
