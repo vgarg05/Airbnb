@@ -235,7 +235,7 @@ async def get_all_listings():
 
 
 @app.post("/chat", response_model=ChatResponse, tags=["Chat"])
-@limiter.limit("10/minute")  # max 10 requests per IP per minute
+@limiter.limit("2/minute")  # max 2 requests per IP per minute
 async def chat(request: Request, body: ChatRequest, x_user_api_key: str | None = Header(None)):
     """
     Accepts a natural-language query, retrieves the top 3 semantically similar
