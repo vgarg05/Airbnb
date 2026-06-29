@@ -369,8 +369,14 @@ export default function App() {
           if (body?.detail) detail = body.detail
         } catch { /* ignore */ }
         
-        // If server tells us 429 (quota) or 400 (no key), trigger quota flow
-        if (response.status === 429 || (response.status === 400 && detail.includes("key"))) {
+        // Distinguish between server rate limit (slowapi) and Gemini quota exhaustion
+        const isServerRateLimit = response.status === 429 && detail.toLowerCase().includes("rate limit exceeded")
+        const isGeminiQuota = (response.status === 429 && !isServerRateLimit) || (response.status === 400 && detail.includes("key"))
+
+        if (isServerRateLimit) {
+          throw new Error('__SERVER_RATE_LIMIT__')
+        }
+        if (isGeminiQuota) {
           setQuotaExhausted(true)
           setShowSettings(true)
         }
@@ -462,16 +468,19 @@ export default function App() {
       console.error("Concierge API Error:", e)
 
       const isOverloaded = msg.includes('unavailable') || msg.includes('503')
-      const isQuotaError = msg.includes('quota') || msg.includes('RESOURCE_EXHAUSTED') || msg.includes('429') || msg.includes('key')
+      const isServerRateLimit = msg === '__SERVER_RATE_LIMIT__'
+      const isQuotaError = !isServerRateLimit && (msg.includes('quota') || msg.includes('RESOURCE_EXHAUSTED') || msg.includes('429') || msg.includes('key'))
       const isNetworkErr = msg.includes('Cannot reach') || msg.includes('Failed to fetch') || msg.includes('NetworkError')
 
-      const aiText = isQuotaError
-        ? '⚠️ **Shared AI limit reached.**\n\nOur shared search quota is temporarily exhausted. To continue chatting, please click the **Settings ⚙️** icon in the header and add your own free Gemini API key.\n\n*Your key is stored safely in your browser and is never saved on our servers.*'
-        : isOverloaded
-          ? 'The AI concierge is currently experiencing high demand. Please try sending your message again in a few seconds. ⏳'
-          : isNetworkErr
-            ? "I'm having trouble connecting to the concierge service right now. Please check your internet connection or try again in a moment. 🌐"
-            : 'Oops! I encountered an unexpected issue while processing your request. Please try again in a moment.'
+      const aiText = isServerRateLimit
+        ? '🚦 **You are sending messages too fast.**\n\nYou have reached the limit of **5 messages per minute**. Please wait a moment and try again.'
+        : isQuotaError
+          ? '⚠️ **Shared AI limit reached.**\n\nOur shared search quota is temporarily exhausted. To continue chatting, please click the **Settings ⚙️** icon in the header and add your own free Gemini API key.\n\n*Your key is stored safely in your browser and is never saved on our servers.*'
+          : isOverloaded
+            ? 'The AI concierge is currently experiencing high demand. Please try sending your message again in a few seconds. ⏳'
+            : isNetworkErr
+              ? "I'm having trouble connecting to the concierge service right now. Please check your internet connection or try again in a moment. 🌐"
+              : 'Oops! I encountered an unexpected issue while processing your request. Please try again in a moment.'
 
       setMessages((prev) => {
         const next = [...prev]
