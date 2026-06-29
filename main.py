@@ -68,14 +68,15 @@ if _REDIS_URL:
         # If it is a secure connection (rediss://), configure it to skip SSL cert verification if needed
         storage_options = {}
         if _REDIS_URL.startswith("rediss://"):
-            storage_options = {"ssl_cert_reqs": "none"}
+            storage_options = {"ssl_cert_reqs": "none", "ssl": True}
         limiter = Limiter(
             key_func=get_remote_address, 
             storage_uri=_REDIS_URL, 
             storage_options=storage_options,
-            swallow_errors=True
+            swallow_errors=True,
+            in_memory_fallback_enabled=True  # Automatically fall back to memory if Redis fails
         )
-        log.info("Rate limiter: successfully using Redis storage.")
+        log.info("Rate limiter: successfully using Redis storage with in-memory fallback enabled.")
     except Exception as e:
         log.error("Failed to connect to Redis, falling back to in-memory: %s", e)
         limiter = Limiter(key_func=get_remote_address, swallow_errors=True)
