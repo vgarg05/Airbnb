@@ -25,10 +25,13 @@ from google.genai import types as genai_types
 from google.genai import errors as genai_errors
 import chromadb
 from chromadb.config import Settings
-from fastapi import FastAPI, HTTPException, Query, Header, status
+from fastapi import FastAPI, HTTPException, Query, Header, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -58,6 +61,27 @@ GEMINI_FALLBACK_MODELS = [
     # "gemini-1.5-flash-8b",     # smallest / most permissive free tier
 ]
 TOP_K = 3  # number of listings to retrieve per query
+
+_REDIS_URL = os.environ.get("REDIS_URL")  # set this env var on Render
+if _REDIS_URL:
+    try:
+        # If it is a secure connection (rediss://), configure it to skip SSL cert verification if needed
+        storage_options = {}
+        if _REDIS_URL.startswith("rediss://"):
+            storage_options = {"ssl_cert_reqs": "none"}
+        limiter = Limiter(
+            key_func=get_remote_address, 
+            storage_uri=_REDIS_URL, 
+            storage_options=storage_options,
+            swallow_errors=True
+        )
+        log.info("Rate limiter: successfully using Redis storage.")
+    except Exception as e:
+        log.error("Failed to connect to Redis, falling back to in-memory: %s", e)
+        limiter = Limiter(key_func=get_remote_address, swallow_errors=True)
+else:
+    limiter = Limiter(key_func=get_remote_address, swallow_errors=True)  # in-memory fallback
+    log.warning("REDIS_URL not set — rate limiter using in-memory storage (not suitable for multi-instance).")
 
 # ---------------------------------------------------------------------------
 # Global singletons (populated during startup)
@@ -107,6 +131,10 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
+
+# Attach limiter to app state and register 429 error handler
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # CORS — allow all origins for deployment
 app.add_middleware(
@@ -194,7 +222,8 @@ async def get_all_listings():
 
 
 @app.post("/chat", response_model=ChatResponse, tags=["Chat"])
-async def chat(body: ChatRequest, x_user_api_key: str | None = Header(None)):
+@limiter.limit("10/minute")  # max 10 requests per IP per minute
+async def chat(request: Request, body: ChatRequest, x_user_api_key: str | None = Header(None)):
     """
     Accepts a natural-language query, retrieves the top 3 semantically similar
     listings from ChromaDB, then asks Claude to generate a helpful response.
@@ -422,7 +451,9 @@ async def _stream_gemini(
 
 
 @app.post("/chat/stream", tags=["Chat"])
+@limiter.limit("5/minute")  # max 5 requests per IP per minute (heavier endpoint)
 async def chat_stream(
+    request: Request,
     body: ChatRequest,
     x_user_api_key: str | None = Header(None),
 ):
